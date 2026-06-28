@@ -47,8 +47,8 @@ public class TerceroView extends VerticalLayout {
     }
 
     private void configurarGrid() {
-    		grid.addColumn("nombre").setHeader("Nombre");
-   		grid.addColumn("cuit").setHeader("CUIT");
+    	grid.addColumn(tercero -> tercero.getNombre()).setHeader("Nombre");
+        grid.addColumn(tercero -> tercero.getCuitl()).setHeader("CUIT");
         grid.asSingleSelect().addValueChangeListener(e -> editar(e.getValue()));
     }
 

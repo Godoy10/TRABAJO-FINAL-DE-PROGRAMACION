@@ -104,7 +104,9 @@ public class FacturaView extends VerticalLayout {
         FormLayout form = new FormLayout();
         
         fecha = new DateTimePicker("Fecha y Hora");
+        
         numero = new TextField("Número de Factura");
+       
         
         comboTercero = new ComboBox<>("Cliente / Tercero");
         comboTercero.setItemLabelGenerator(Tercero::getNombre);

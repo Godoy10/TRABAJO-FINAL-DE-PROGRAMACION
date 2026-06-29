@@ -1,5 +1,6 @@
 package com.example.examplefeature.ui;
 
+import com.example.base.ui.MainLayout;
 import com.example.examplefeature.model.Facultad;
 import com.example.examplefeature.repositories.FacultadRepository; 
 
@@ -15,13 +16,19 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.IntegerField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
+import com.vaadin.flow.router.Menu;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 
+import jakarta.annotation.security.PermitAll;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Route("facultad")
-@AnonymousAllowed
+@Route(value = "facultad", layout = MainLayout.class)
+@PageTitle("Gestión de Facultades")
+@Menu(order = 4, icon = "vaadin:institution") 
+@PermitAll
 public class FacultadView extends VerticalLayout {
 
     // Inyectamos el Repositorio directamente para evitar el conflicto con Hilla

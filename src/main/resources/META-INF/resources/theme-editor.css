@@ -3,7 +3,8 @@
  * manual changes to individual CSS properties may be overwritten by the theme editor.
  */
 html {
-  --aura-content-color-scheme:auto;
-  --aura-notification-color-scheme:auto;
-  color-scheme:auto;
+  --aura-accent-color-light:rgba(161,168,57,1);
+  --aura-content-color-scheme:dark;
+  --aura-notification-color-scheme:dark;
+  color-scheme:dark;
 }

@@ -43,8 +43,11 @@ public class HomeView extends VerticalLayout {
 
         Button btnFacultades = new Button("Módulo de Facultades", e -> getUI().ifPresent(ui -> ui.navigate("facultad")));
         btnFacultades.addThemeVariants(ButtonVariant.LUMO_PRIMARY, ButtonVariant.LUMO_LARGE);
+        
+        Button btnPagos = new Button("Módulo de Pagos", e -> getUI().ifPresent(ui -> ui.navigate("pago")));
+        btnPagos.addThemeVariants(ButtonVariant.LUMO_PRIMARY, ButtonVariant.LUMO_LARGE);
 
-        menuBotones.add(btnFacturas, btnTerceros, btnFacultades);
+        menuBotones.add(btnFacturas, btnTerceros, btnFacultades, btnPagos);
 
         // Agregamos todo al layout principal
         add(titulo, subtitulo, menuBotones);
